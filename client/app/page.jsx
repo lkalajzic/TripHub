@@ -1,8 +1,10 @@
 import '../styles/globals.css';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <div className='text-heading-hero font-poppins'>heading-hero</div>
       <div className='text-heading-1'>heading-1</div>
       <div className='text-heading-2'>heading-2</div>
