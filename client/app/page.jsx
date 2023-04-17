@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
+import CardSection from '../components/CardSection';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <button className='bg-secondary-sky text-c9 p-5 m-5'>
         secondary-sky
       </button>
+      <CardSection />
     </>
   );
 }
