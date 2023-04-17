@@ -19,8 +19,8 @@ const Footer = () => {
                 </div>
               </Link>
               <p className='text-c3 text-[14px] leading-6'>
-                Book your dream vacation with ease - find the perfect hotel,
-                flight, and rental car all in one place!
+                Explore your world effortlessly with TripHub - Your one-stop
+                destination for hassle-free trip booking!
               </p>
             </div>
 
