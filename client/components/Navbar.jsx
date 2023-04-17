@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link href={'/'}>
             <div className='relative w-[40px] h-[38px] object-contain flex items-center'>
               <Image src={logo} alt='logo' />
-              <p className='text-[20px] text-c2 leading-6 ml-2'>TripHub</p>
+              <p className='text-heading-4 text-c2 leading-6 ml-2'>TripHub</p>
             </div>
           </Link>
         </div>

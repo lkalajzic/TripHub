@@ -1,10 +1,12 @@
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <>
       <Navbar />
+
       <div className='text-heading-hero font-poppins'>heading-hero</div>
       <div className='text-heading-1'>heading-1</div>
       <div className='text-heading-2'>heading-2</div>
@@ -25,6 +27,8 @@ export default function Home() {
       <button className='bg-secondary-sky text-c9 p-5 m-5'>
         secondary-sky
       </button>
+
+      <Footer />
     </>
   );
 }

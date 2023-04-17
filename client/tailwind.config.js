@@ -33,7 +33,6 @@ module.exports = {
       poppins: ['Poppins', 'sans-serif'],
     },
     fontSize: {
-      // big screens
       'heading-hero': ['80px', { lineHeight: '100px', fontWeight: 700 }],
       'heading-1': [
         '48px',
