@@ -1,7 +1,7 @@
 import Image1 from './barcelona.webp';
 import Image6 from "./Dubai.webp";
-import Image4 from "./check.png";
-import Image5 from "./sadge.png";
+import Image4 from "./check.jpg";
+import Image5 from "./sadge.webp";
 import Image2 from "./London2.jpg";
 import Image3 from "./Dentist.jpg";
 

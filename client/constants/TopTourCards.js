@@ -8,13 +8,13 @@ export default [
       city: "Tokyo"
     },
     {
-        img: '/../public/imagesTop/pain.webp',
-        title: 'Spain',
+        img: '/../public/imagesTop/pain.jpg',
+        title: 'sPain',
         text: `See ${genRand(0, 35, 0)} destinations`,
         city: "Madrid"
     },
     {
-        img: '/../public/imagesTop/bait.png',
+        img: '/../public/imagesTop/bait.jpg',
         title: 'Bali',
         text: `See ${genRand(0, 35, 0)} destinations`,
         city: "Ilab"
