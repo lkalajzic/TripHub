@@ -5,7 +5,7 @@ import Card from "./Cards";
 
 const TopTour = () => {
     return (
-        <section class ="container mx-auto py-36 px-8 lg:h-[700px] md:h-[1200px] sm:h-[1730px]">
+        <section class ="max-w-[1170px] mx-auto py-36 lg:h-[700px] md:h-[1200px] sm:h-[1730px]">
             <div class="relative w-[1014px] transform top-[0%] bottom-[30px]">
                 <h2 class="font-bold h-[82px] font-dm-sans text-[48px] leading tracking-tighter text-c1">
                     Top Tour

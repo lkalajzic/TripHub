@@ -7,12 +7,12 @@ import images from "../../public/ImagesFeat/pictures"
 
 const FeaturedDest = () => {
   return (
-    <section class ="container mx-auto py-36 px-8 h-auto">
-        <div class="relative w-[1014px] transform top-[0%] bottom-[33.96%]">
+    <div class ="max-w-[1170px] mx-auto">
+        <div class="relative w-auto transform top-[0%] bottom-[33.96%]">
             <h2 class="font-bold h-[82px] font-dm-sans text-[48px] leading tracking-tighter text-c1">
                 Cool Ideas
             </h2>
-            <div class="w-[1014px] font-normal font-dm-sans text-[16px] leading-[24px] text-c3 flex-shrink-0 order-1 flex-grow-0">
+            <div class="w-auto font-normal font-dm-sans text-[16px] leading-[24px] text-c3 flex-shrink-0 order-1 flex-grow-0">
                 If you're out of ideas, maybe consider some of the following options
             </div>
         </div>
@@ -30,7 +30,7 @@ const FeaturedDest = () => {
                 <Card img={images[5]} outerWidth="270px" outerHeight="220px" rating={genRand(1, 5, 2)} innerWidth="20px" innerHeight="15px" textSize="18px" smallTextSize="10px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Dubai"/>
             </div>
         </div>
-    </section>
+    </div>
     
     
   );

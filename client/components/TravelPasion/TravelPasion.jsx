@@ -6,7 +6,7 @@ import Card from "./Cards";
 
 const TravelPasion = () => {
     return (
-        <section class ="container mx-auto py-36 px-8 lg:h-[560px] md:h-[900px] sm:h-[1600px]">
+        <section class ="max-w-[1170px] mx-auto lg:h-[560px] md:h-[900px] sm:h-[1600px]">
             <div class="relative w-[1014px] transform top-[0%] bottom-[30px]">
                 <h2 class="font-bold h-[82px] font-dm-sans text-[48px] leading tracking-tighter text-c1">
                     Travel Your Passion
@@ -16,7 +16,7 @@ const TravelPasion = () => {
                 </div>
             </div>
             
-            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 absolute py-[20px] ">  
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[30px] absolute py-[20px] ">  
                         {cardList.map((cardInfo) => (
                             <Card 
                                 outerWidth="270px" 

@@ -7,13 +7,14 @@ import FeaturedDest from '../components/FeaturedDest/FeaturedDest';
 import TopTour from '../components/TopTour/TopTour';
 import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
-import HotelList from '@/components/HotelSearch/HotelList';
+import TravelPasion from "../components/TravelPasion/TravelPasion"
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <CardSection />
+      <TravelPasion />
       <FeaturedDest />
       <TopTour />
       <ExploreWorld />
