@@ -1,6 +1,3 @@
-Ovdje cu linkati sve resurse koje imamo:
-https://lukakalajzic.notion.site/TripHub-0ade52d235d34df4807d70ebd5f6268b - notion site od kaleta, sadrži wbs, i pert diagram između ostalog kao i opcenito smjernice
-
 https://www.figma.com/file/jOB2jNUhmijYF2Nn7n1GhS/TripHub?node-id=715-31&t=c3kRySKlZPj1eDjd-0 - design koji smo napravili(ne djeliti dalje itd...)
 koristi figma koji je leading standard za dizajnove stranica. Prvo što moramo napravatiti je unijeti ovaj design u js code koristeći React.
 
