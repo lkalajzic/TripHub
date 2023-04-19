@@ -21,7 +21,7 @@ const FeaturedDest = () => {
                 <Card img={images[0]} outerWidth="870px" outerHeight="280px" rating={genRand(1, 5, 2)} innerHeight="30px" innerWidth="30px" textSize="40px" smallTextSize="20px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Barcelona Tour"/>
                 <div class="flex justify-between w-[870px] h-[408px] gap-[54px] flex-row">
                     <Card img={images[1]} outerWidth="408px" outerHeight="408px" rating={genRand(1, 5, 2)} innerWidth="30px" innerHeight="19px" textSize="24px" smallTextSize="14px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="London, Big Eye"/>
-                    <Card img={images[2]} outerWidth="408px" outerHeight="408px" rating={genRand(1, 5, 2)} innerWidth="30px" innerHeight="19px" textSize="24px" smallTextSize="14px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Dentist apointment"/>
+                    <Card img={images[2]} outerWidth="408px" outerHeight="408px" rating={genRand(1, 5, 2)} innerWidth="30px" innerHeight="19px" textSize="24px" smallTextSize="14px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Zimbabwe"/>
                 </div>
             </div>
             <div class="flex flex-col justify-between h-[718px] w-[270px] gap-[27px]">
