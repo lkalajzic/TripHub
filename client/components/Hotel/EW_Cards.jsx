@@ -28,7 +28,7 @@ const EW_Cards = () => {
                 >
                   {card.price}
                 </a>
-              <p className='caption-16 text-c3 mb-2'>
+              <p className='text-c3 mb-2'>
                 {card.distance} km from city center
               </p>
               <p className='text-lg font-normal text-c4 mb-1'>

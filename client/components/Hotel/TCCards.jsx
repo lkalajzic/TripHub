@@ -14,7 +14,7 @@ const TCCards = () => {
           >
             <img className='rounded-3xl p-3 w-1/2' src={card.img} alt='' />
             <div className='w-1/2 px-3'>
-              <p className='font-bold mb-2'>
+              <p className='text-heading-4 font-bold mb-2'>
                 {card.title}
               </p>
               <p className='body-16 mb-2'>
