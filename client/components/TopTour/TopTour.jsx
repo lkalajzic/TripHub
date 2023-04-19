@@ -5,8 +5,8 @@ import Card from "./Cards";
 
 const TopTour = () => {
     return (
-        <section class ="max-w-[1170px] mx-auto py-36 lg:h-[700px] md:h-[1200px] sm:h-[1730px]">
-            <div class="relative w-[1014px] transform top-[0%] bottom-[30px]">
+        <section class ="max-w-[1170px] md:max-w-[770px] sm:max-w-[370px] mx-auto py-36 lg:h-[700px] md:h-[1200px] sm:h-[1730px]">
+            <div class="relative w-[1014px] transform top-[0%] bottom-[30px] sm:justify-center">
                 <h2 class="font-bold h-[82px] font-dm-sans text-[48px] leading tracking-tighter text-c1">
                     Top Tour
                 </h2>
@@ -27,7 +27,8 @@ const TopTour = () => {
                                 topText={cardInfo.title}
                                 bottomText={cardInfo.text}
                                 city={cardInfo.city} 
-                                img={cardInfo.img}/>
+                                img={cardInfo.img}
+                                cityOff={cardInfo.titleOffset}/>
                             
                         ))}    
                 
