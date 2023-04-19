@@ -1,13 +1,13 @@
 'use client';
 
 
-import Card from "../components/Cards";
-import {genRand} from "../utils"
-import images from "../public/Images/pictures"
+import Card from "./Cards";
+import {genRand} from "../../utils"
+import images from "../../public/ImagesFeat/pictures"
 
 const FeaturedDest = () => {
   return (
-    <section>
+    <section class ="container mx-auto py-36 px-8 h-auto">
         <div class="relative w-[1014px] left-[135px] transform top-[0%] bottom-[33.96%]">
             <h2 class="font-bold h-[82px] font-dm-sans text-[48px] leading tracking-tighter text-c1">
                 Cool Ideas
