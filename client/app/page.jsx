@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 import SearchField from '../components/SearchField';
 import CardSection from '../components/Hotel/CardSection';
-import FeaturedDest from '../components/FeaturedDestinations/FeaturedDestinations';
+import FeaturedDestinations from '../components/FeaturedDestinations/FeaturedDestinations';
 import TopTour from '../components/TopTour/TopTour';
 import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <SearchField />
       <CardSection />
-      <FeaturedDest />
+      <FeaturedDestinations />
       <TopTour />
       <ExploreWorld />
       <TrendingCites />
