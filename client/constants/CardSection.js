@@ -35,7 +35,7 @@ export default [
     text: 'See 24 destinations',
   },
   {
-    img: '../images/Tokyo.jpg',
+    img: '/images/Tokyo.jpg',
     title: 'Tokyo, Japan',
     text: 'See 39 destinations',
   },
