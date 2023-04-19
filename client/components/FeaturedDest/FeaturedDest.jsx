@@ -25,8 +25,8 @@ const FeaturedDest = () => {
                 </div>
             </div>
             <div class="flex flex-col justify-between h-[718px] w-[270px] gap-[27px]">
-                <Card img={images[3]} outerWidth="270px" outerHeight="220px" rating={genRand(1, 5, 2)} innerWidth="20px" innerHeight="15px" textSize="18px" smallTextSize="10px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Check out this badboy"/>
-                <Card img={images[4]} outerWidth="270px" outerHeight="220px" rating={genRand(1, 5, 2)} innerWidth="20px" innerHeight="15px" textSize="18px" smallTextSize="10px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="This will be so much work to setup properly"/>
+                <Card img={images[3]} outerWidth="270px" outerHeight="220px" rating={genRand(1, 5, 2)} innerWidth="20px" innerHeight="15px" textSize="18px" smallTextSize="10px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Soviet Union"/>
+                <Card img={images[4]} outerWidth="270px" outerHeight="220px" rating={genRand(1, 5, 2)} innerWidth="20px" innerHeight="15px" textSize="18px" smallTextSize="10px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Croatia"/>
                 <Card img={images[5]} outerWidth="270px" outerHeight="220px" rating={genRand(1, 5, 2)} innerWidth="20px" innerHeight="15px" textSize="18px" smallTextSize="10px" bottomText={`${genRand(1, 100, 0)} Activities`} topText="Dubai"/>
             </div>
         </div>
