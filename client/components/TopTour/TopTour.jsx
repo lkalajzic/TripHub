@@ -4,25 +4,25 @@ import cardList from '../../constants/TopTourCards';
 
 const TopTour = () => {
   return (
-    <section className="lg:max-w-[1170px] md:max-w-[770px] sm:max-w-[370px] mx-auto py-36 lg:h-[700px] md:h-[1200px] sm:h-[1730px]">
-      <div className="relative w-[1014px] transform top-[0%] bottom-[30px] sm:justify-center">
-        <h2 className="font-bold h-[82px] font-dm-sans text-[48px] leading tracking-tighter text-c1">
+    <div className='mx-auto h-[1700px] max-w-[370px]  md:h-[1190px] md:max-w-[770px] lg:h-[700px] lg:max-w-[1170px]'>
+      <div className='relative bottom-[30px] top-[0%] w-[1014px] transform sm:justify-center'>
+        <h2 className='font-dm-sans leading h-[82px] text-[48px] font-bold tracking-tighter text-c1'>
           Top Tour
         </h2>
-        <div className="w-[1014px] text-[#84878B] font-normal font-dm-sans text-[16px] leading-[24px] flex-grow-0">
+        <div className='font-dm-sans w-[1014px] flex-grow-0 text-[16px] font-normal leading-[24px] text-[#84878B]'>
           Keep calm and travel on
         </div>
       </div>
 
-      <div className="grid gap-6 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 py-[20px] w-full">
+      <div className='grid w-full grid-cols-1 gap-6 py-[20px] md:grid-cols-2 lg:grid-cols-3'>
         {cardList.map((cardInfo) => (
           <Card
-            outerWidth="370px"
-            outerHeight="495px"
-            innerWidth="30px"
-            innerHeight="30px"
-            textSize="34px"
-            smallTextSize="16px"
+            outerWidth='370px'
+            outerHeight='495px'
+            innerWidth='30px'
+            innerHeight='30px'
+            textSize='34px'
+            smallTextSize='16px'
             topText={cardInfo.title}
             bottomText={cardInfo.text}
             city={cardInfo.city}
@@ -32,7 +32,7 @@ const TopTour = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
