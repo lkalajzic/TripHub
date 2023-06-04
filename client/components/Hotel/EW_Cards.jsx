@@ -18,9 +18,7 @@ const EW_Cards = () => {
               <span className='text-c4'>{card.n_rates}</span>
             </p>
             <div className=' px-3 relative'>
-              <p className='font-bold'>
-                {card.title}
-              </p>
+              <p className='font-bold'>{card.title}</p>
               <a
                   role='button'
                   href='#'
@@ -28,7 +26,7 @@ const EW_Cards = () => {
                 >
                   {card.price}
                 </a>
-              <p className='text-c3 mb-2'>
+              <p className='caption-16 text-c3 mb-2'>
                 {card.distance} km from city center
               </p>
               <p className='text-lg font-normal text-c4 mb-1'>
@@ -41,7 +39,7 @@ const EW_Cards = () => {
               </p>
             </div>
           </div>
-        ))} 
+        ))}
       </div>
     </>
   );

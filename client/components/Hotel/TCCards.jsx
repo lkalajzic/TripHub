@@ -14,7 +14,7 @@ const TCCards = () => {
           >
             <img className='rounded-3xl p-3 w-1/2' src={card.img} alt='' />
             <div className='w-1/2 px-3'>
-              <p className='text-heading-4 font-bold mb-2'>
+              <p className='font-bold mb-2'>
                 {card.title}
               </p>
               <p className='body-16 mb-2'>
@@ -22,8 +22,7 @@ const TCCards = () => {
                 <span className='text-c4'>{card.n_rates}</span>
               </p>
               <p className='body-16 mb-4'>
-                {card.price}{' '}
-                <span className='text-c4'>/night</span>
+                {card.price} <span className='text-c4'>/night</span>
               </p>
               <a
                 role='button'
