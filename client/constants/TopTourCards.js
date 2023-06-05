@@ -1,23 +1,26 @@
-import {genRand} from "../utils/index.js"
+import { genRand } from '../utils/index.js';
 
 export default [
     {
       img: '/../public/imagesTop/Japan.jpg',
       title: 'Japan',
       text: `See ${genRand(0, 35, 0)} destinations`,
-      city: "Tokyo"
+      city: "Tokyo",
+      titleOffset: "30px"
     },
     {
-        img: '/../public/imagesTop/pain.jpg',
-        title: 'sPain',
+        img: '/../public/imagesTop/spain.jpg',
+        title: 'Spain',
         text: `See ${genRand(0, 35, 0)} destinations`,
-        city: "Madrid"
+        city: "Madrid",
+        titleOffset: "27px"
     },
     {
-        img: '/../public/imagesTop/bait.jpg',
+        img: '/../public/imagesTop/bali.jpg',
         title: 'Bali',
         text: `See ${genRand(0, 35, 0)} destinations`,
-        city: "Ilab"
+        city: "Ilab",
+        titleOffset: "43px"
     }
   ];
   

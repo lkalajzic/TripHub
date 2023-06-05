@@ -22,8 +22,7 @@ const TCCards = () => {
                 <span className='text-c4'>{card.n_rates}</span>
               </p>
               <p className='body-16 mb-4'>
-                {card.price}{' '}
-                <span className='text-c4'>/night</span>
+                {card.price} <span className='text-c4'>/night</span>
               </p>
               <a
                 role='button'
