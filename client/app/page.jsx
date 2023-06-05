@@ -8,6 +8,7 @@ import FeaturedDestinations from '../components/FeaturedDestinations/FeaturedDes
 import TopTour from '../components/TopTour/TopTour';
 import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
+import TravelPasion from "../components/TravelPasion/TravelPasion"
 
 export default function Home() {
   return (

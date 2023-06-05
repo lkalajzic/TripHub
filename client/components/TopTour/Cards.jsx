@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 
@@ -14,44 +12,52 @@ const Card = ({
   topText,
   city,
   img,
+  cityOff,
 }) => {
   return (
     <div
-      class='flex relative w-full h-full rounded-[15px] hover:scale-105 transition-all duration-200 ease-in-out hover:shadow-2xl hover:shadow-c3 hover:shadow-opacity-50 hover:shadow-offset-2 hover:shadow-offset-c00 cursor-pointer over:opacity-90'
-      style={{ width: `${outerWidth}`, height: `${outerHeight}` }}
+      className='hover:shadow-opacity-50 hover:shadow-offset-2 hover:shadow-offset-c00 over:opacity-90 relative flex h-full w-full cursor-pointer rounded-[15px] transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-c3'
+      style={{ width: outerWidth, height: outerHeight }}
     >
       <Image
-        class='w-full h-full object-cover rounded-[15px] shadow-xl '
+        className='h-full w-full rounded-[15px] object-cover shadow-xl'
         src={img}
         alt='Picture'
         width={370}
         height={495}
       />
       <div
-        class='absolute flex'
+        className='absolute flex'
         style={{
-          left: `${innerWidth}`,
-          top: `${innerHeight}`,
-          right: `${innerWidth}`,
-          bottom: `${innerHeight}`,
+          left: innerWidth,
+          top: innerHeight,
+          right: innerWidth,
+          bottom: innerHeight,
         }}
       >
-        <div class='w-[114px] h-[48px] rounded-full bg-[#141416] opacity-20 flex items-center justify-center' />
+        <div className='flex h-[48px] w-[114px] items-center justify-center rounded-full bg-[#141416] opacity-20' />
 
-        <span class='text-[#FFFFFF] absolute px-[31px] py-[10px] font-bold font-dm-sans text-[18px]'>{`${city}`}</span>
+        <span
+          className='font-dm-sans absolute py-[10px] text-[18px] font-bold text-[#FFFFFF]'
+          style={{ left: cityOff }}
+        >
+          {city}
+        </span>
         <div
-          class='absolute bottom-0 left-0 w-full'
-          style={{ bottom: `${textSize}` }}
+          className='absolute bottom-0 left-0 w-full'
+          style={{ bottom: textSize }}
         >
           <span
-            class={`text-white font-bold font-dm-sans`}
-            style={{ fontSize: `${textSize}` }}
-          >{`${topText}`}</span>
+            className='font-dm-sans font-bold text-white'
+            style={{ fontSize: textSize }}
+          >
+            {topText}
+          </span>
         </div>
-        <div class='absolute left-0 w-full bottom-0'>
+        <div className='absolute bottom-0 left-0 w-full'>
           <span
-            class={`text-white font-dm-sans opacity-90`}
-            style={{ fontSize: `${smallTextSize}` }}
+            className='font-dm-sans text-white opacity-90'
+            style={{ fontSize: smallTextSize }}
           >
             {bottomText}
           </span>
