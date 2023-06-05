@@ -18,9 +18,7 @@ const EW_Cards = () => {
               <span className='text-c4'>{card.n_rates}</span>
             </p>
             <div className=' px-3 relative'>
-              <p className='font-bold'>
-                {card.title}
-              </p>
+              <p className='font-bold'>{card.title}</p>
               <a
                   role='button'
                   href='#'
@@ -41,7 +39,7 @@ const EW_Cards = () => {
               </p>
             </div>
           </div>
-        ))} 
+        ))}
       </div>
     </>
   );
