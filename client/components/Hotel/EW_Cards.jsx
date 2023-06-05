@@ -20,12 +20,12 @@ const EW_Cards = () => {
             <div className=' px-3 relative'>
               <p className='font-bold'>{card.title}</p>
               <a
-                role='button'
-                href='#'
-                className='right-0 top-0 absolute text-left text-white bg-blue-500 px-2 py-0.5 rounded-md hover:bg-blue-700 ml-[70%] mr-[5%]'
-              >
-                {card.price}
-              </a>
+                  role='button'
+                  href='#'
+                  className='right-0 top-0 absolute text-left text-white bg-blue-500 px-2 py-0.5 rounded-md hover:bg-blue-700 ml-[70%] mr-[5%]'
+                >
+                  {card.price}
+                </a>
               <p className='caption-16 text-c3 mb-2'>
                 {card.distance} km from city center
               </p>
