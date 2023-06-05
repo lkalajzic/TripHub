@@ -1,25 +1,26 @@
 "use client";
 
 import React, { useState } from 'react';
-import { useLogin } from "/hooks/useLogin";
+import { useSignup } from "/hooks/useSignup";
 
-const Login = () => {
+const Signup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
 
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const {login, error, isLoading} = useLogin()
+  const {signup, error, isLoading} = useSignup()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    console.log('login form submited')
+    console.log('signup form submited')
 
-    await login(email, password)
+    await signup(email, password)
   }
 
   return (
@@ -28,13 +29,25 @@ const Login = () => {
         className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         onClick={toggleForm}
       >
-        Login
+        Signup
       </button>
       {isOpen && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg p-8 w-96">
-            <h2 className="text-2xl font-bold mb-6">Log In</h2>
+            <h2 className="text-2xl font-bold mb-6">Sign Up</h2>
             <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="name"
+                  type="name" 
+                  onChange={(e) => setName(e.target.value)} 
+                  value={name} 
+                />
+              </div>
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                   Email
@@ -81,14 +94,14 @@ const Login = () => {
                   className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
-                  Sign In
+                  Sign Up
                 </button>
               </div>
             </form>
             <div className="text-center mt-4">
-              <span className="text-gray-700">Don't have an account?</span>
+              <span className="text-gray-700">Have an account?</span>
               <a className="text-blue-500 hover:text-blue-600 ml-2" href="/">
-                Sign Up
+                Log In
               </a>
             </div>
           </div>
@@ -98,4 +111,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
