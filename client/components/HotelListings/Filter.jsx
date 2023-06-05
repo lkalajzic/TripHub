@@ -4,6 +4,7 @@ const Filter = () => {
       <div className='hidden md:block'>
         <div className='flex flex-col justify-betweem items-start gap-5 w-[290px] h-[1322px]'>
           <div className='flex flex-col gap-[30px]'>
+            {/* Search location or property section  */}
             <div className='flex flex-col items-start gap-[14px]'>
               <p className='text-sidebar text-body-18'>
                 Search location or property
@@ -17,6 +18,7 @@ const Filter = () => {
                 <img src='../../hotels/icons/Search.svg' />
               </div>
             </div>
+            {/* Popular filters  */}
             <div className='flex flex-col justify-between items-start gap-[15px]'>
               <p className='text-c1 text-body-18'>Popular filters</p>
               <div className='flex flex-row justify-between items-center gap-3'>
@@ -49,6 +51,7 @@ const Filter = () => {
           </div>
         </div>
       </div>
+
       <div className='hidden md:block'>
         <div className='flex flex-col items-center'></div>
       </div>
