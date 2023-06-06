@@ -4,7 +4,7 @@ import HotelCard from './HotelCard';
 const HotelList = () => {
   return (
     <>
-      <div className='flex flex-col flex-start gap-[220px] md:gap-0 mb-32'>
+      <div className='flex flex-col flex-start gap-[240px] lg:gap-0 mb-[200px] lg:mb-5 mx-auto'>
         <HotelCard />
         <HotelCard />
         <HotelCard />

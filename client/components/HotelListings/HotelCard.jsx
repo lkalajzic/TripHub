@@ -6,17 +6,17 @@ import HotelData from '../../constants/HotelData';
 const HotelCard = () => {
   return (
     <>
-      <div className='h-[465px] w-[970] m-5 mb-96 md:mb-8'>
+      <div className='h-[465px] w-[970] mb-96 lg:mb-8'>
         {HotelData.map((hotel) => (
-          <div className='flex flex-col md:flex-row'>
+          <div className='flex flex-col lg:flex-row'>
             <div>
               <img
                 src={hotel.image}
                 alt={hotel.name}
-                className='w-[420px] h-[465px] object-cover rounded-t-3xl md:rounded-l-3xl md:rounded-r-none'
+                className='w-[420px] h-[475px] min-w-[300px] object-cover rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none'
               />
             </div>
-            <div className='p-[31px] gap-5 md:gap-[41px] max-w-[420px] sm:min-w-[420px] md:max-w-none flex flex-col border rounded-b-3xl md:rounded-b-none md:rounded-r-3xl'>
+            <div className='p-[31px] gap-5 lg:gap-[41px] max-w-[420px] sm:min-w-[420px] lg:max-w-none max-h-[600px] lg:max-h-[475px] xl:max-h-none flex flex-col border rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl'>
               <div className='flex flex-col gap-5 justify-between'>
                 <h3 className='text-heading-3 text-[#23262F]'>{hotel.name}</h3>
                 <div className='flex flex-col items-start sm:flex-row sm:items-center gap-5'>
@@ -45,8 +45,8 @@ const HotelCard = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex flex-col md:flex-row md:flex-wrap gap-2 text-c3 text-[14px]'>
-                <div className='flex flex-col md:flex-row md:flex-wrap gap-2 items-start'>
+              <div className='flex flex-col lg:flex-row lg:flex-wrap gap-2 text-c3 text-[14px]'>
+                <div className='flex flex-col lg:flex-row lg:flex-wrap gap-2 items-start'>
                   <div className='flex flex-row gap-2 items-center'>
                     <img
                       src='/hotels/icons/Location.svg'
@@ -73,7 +73,7 @@ const HotelCard = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex flex-col justify-between md:flex-row gap-5'>
+              <div className='flex flex-col justify-between lg:flex-row gap-5'>
                 <div className='flex flex-col gap-3 justify-center items-start'>
                   {hotel.amenities.map((amenity) => (
                     <div className='flex flex-row gap-3 items-center'>
@@ -88,14 +88,14 @@ const HotelCard = () => {
                     </div>
                   ))}
                 </div>
-                <div className='flex flex-col gap-3 md:justify-end'>
-                  <div className='flex flew-row gap-2 items-center md:justify-center px-1'>
+                <div className='flex flex-col gap-3 lg:justify-end'>
+                  <div className='flex flew-row gap-2 items-center lg:justify-center px-1'>
                     <p className='text-c3 text-[28px] font-bold leading-10'>
                       €{hotel.price}
                     </p>
                     <p className='text-c3 text-[14px]'>for two</p>
                   </div>
-                  <button className='flex items-center justify-center text-white bg-primary-blue hover:bg-blue-hover w-[104px] h-[34px] md:w-[176px] md:h-[48px] rounded-[30px]'>
+                  <button className='flex items-center justify-center text-white bg-primary-blue hover:bg-blue-hover w-[104px] h-[34px] lg:w-[176px] lg:h-[48px] rounded-[30px]'>
                     Book now
                   </button>
                 </div>

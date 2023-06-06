@@ -40,7 +40,7 @@ const SearchField = () => {
   };
 
   return (
-    <div className='w-3/4'>
+    <div className='w-3/4 pt-10 mx-auto'>
       <div className='bg-white rounded-[20px] p-6 mb-10'>
         <div className='flex mb-4'>
           <div
