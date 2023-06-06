@@ -1,6 +1,6 @@
 export default [
     {
-        img: "/images/Mexico.jpg",
+        img: "/images/Mexico.webp",
         rating: "4.32",
         n_rates: "(147)",
         title: "Hotel Zone",
@@ -10,7 +10,7 @@ export default [
         text: "5389",
     },
     {
-        img: "/images/Iceland.jpg",
+        img: "/images/Iceland.webp",
         rating: "4.71",
         n_rates: "(189)",
         title: "Alp House",
@@ -20,7 +20,7 @@ export default [
         text: "401",
     },
     {
-        img: "/images/Crete.jpg",
+        img: "/images/Crete.webp",
         rating: "4.26",
         n_rates: "(205)",
         title: "Beach House",
@@ -30,7 +30,7 @@ export default [
         text: "296",
     },
     {
-        img: "/images/Cape-Town-South-Africa.jpg",
+        img: "/images/Cape-Town-South-Africa.webp",
         rating: "4.58",
         n_rates: "(211)",
         title: "Apartment",
