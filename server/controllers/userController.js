@@ -1,4 +1,5 @@
-const User = require('../models/userModel.js');
+//const User = require('../models/userModel.js');
+import * as User from './../models/userModel.js';
 const jwt = require('jsonwebtoken');
 
 const createToken = (_id) => {
@@ -37,4 +38,4 @@ const signupUser = async (req, res) => {
   }
 };
 
-module.exports = { signupUser, loginUser };
+module.exports = { loginUser, signupUser };
