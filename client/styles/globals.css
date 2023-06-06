@@ -8,3 +8,15 @@
 * {
   font-family: 'DM Sans', sans-serif;
 }
+
+.range-input::-webkit-slider-thumb {
+  background-color: white;
+}
+
+.range-input::-moz-range-thumb {
+  background-color: white;
+}
+
+.range-input::-ms-thumb {
+  background-color: white;
+}
