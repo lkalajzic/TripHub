@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { useLogin } from "/hooks/useLogin";
+//import { useLogin } from "/hooks/useLogin";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,14 +12,27 @@ const Login = () => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const {login, error, isLoading} = useLogin()
+  //const {login, error, isLoading} = useLogin()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     console.log('login form submited')
 
-    await login(email, password)
+    try {
+      const response = await fetch('http://localhost:8080/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+  
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

@@ -13,14 +13,28 @@ const Signup = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const {signup, error, isLoading} = useSignup()
+  //const {signup, error, isLoading} = useSignup()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     console.log('signup form submited')
 
-    await signup(email, password)
+    try {
+        // Send the user data to the server
+        const response = await fetch('http://localhost:8080/api/users/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password }),
+        });
+  
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
   }
 
   return (
