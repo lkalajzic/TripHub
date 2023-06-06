@@ -1,12 +1,31 @@
 import express from 'express';
-const router = express.Router();
+import validator from 'validator';
 import User from '../models/userModel.js';
+
+const router = express.Router();
 
 // Create an API endpoint to handle user registration
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
+    // validation
+    if (!email || !password) {
+      throw Error('All fields must be filled');
+    }
+    if (!validator.isEmail(email)) {
+      throw Error('Email not valid');
+    }
+    /*if (!validator.isStrongPassword(password)) {
+      throw Error('Password not strong enough');
+    }*/
+
+    const exists = await User.findOne({ email });
+
+    if (exists) {
+      throw Error('Email already in use');
+    }
+
     // Create a new user
     const user = new User({ name, email, password });
     await user.save();
@@ -18,10 +37,16 @@ router.post('/register', async (req, res) => {
   }
 });
 
+// Create an API endpoint to handle user login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
+    //validation
+    /*if (!email || !password) {
+      throw Error('All fields must be filled');
+    }*/
+
     // Find the user by email
     const user = await User.findOne({ email });
 
