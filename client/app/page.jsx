@@ -9,12 +9,12 @@ import TopTour from '../components/TopTour/TopTour';
 import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
 import Login from '../components/Signig/Login';
+import HotelDetail from '../components/HotelDetail/HotelDetail';
 
 export default function Home() {
   return (
-    <>
+    <div className='bg-slate-100'>
       <Navbar />
-      <Login />
       <SearchField />
       <CardSection />
       <FeaturedDestinations />
@@ -22,6 +22,6 @@ export default function Home() {
       <ExploreWorld />
       <TrendingCites />
       <Footer />
-    </>
+    </div>
   );
 }
