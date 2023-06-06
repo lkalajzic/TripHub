@@ -9,11 +9,13 @@ import TopTour from '../components/TopTour/TopTour';
 import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
 import Login from '../components/SignIn/Login';
+import Signup from '../components/SignIn/Signup';
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <Login />
       <Signup />
       <SearchField />
       <CardSection />
