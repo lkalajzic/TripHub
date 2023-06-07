@@ -51,6 +51,9 @@ const Signup = () => {
     } catch (error) {
       console.error(error);
     }
+
+    // Close the modal after login
+    toggleForm();
   };
 
   useEffect(() => {
