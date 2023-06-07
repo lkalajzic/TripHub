@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import filterForm from './HotelListings/filterForm';
 
 const SearchField = () => {
   const [activeTab, setActiveTab] = useState('hotel');
@@ -33,10 +34,11 @@ const SearchField = () => {
   const handleCheckOutDateChange = (e) => {
     setCheckOutDate(e.target.value);
   };
-
+  
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    const filteredHotels = filterForm(location, checkInDate, checkOutDate);
   };
 
   return (
