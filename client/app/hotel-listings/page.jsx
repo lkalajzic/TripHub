@@ -12,7 +12,6 @@ import Filter from '../../components/HotelListings/Filter';
 export default function Home() {
   const [isFilterVisible, setFilterVisible] = useState(false);
 
-
   // Function to handle the click event on a div containing the Filter
   const handleDivClick = () => {
     setFilterVisible(!isFilterVisible);
@@ -22,15 +21,14 @@ export default function Home() {
     <>
       <Navbar />
       <div className='bg-[#fafafb]'>
-        <div className='flex justify-between items-center'>
+        <div className='flex items-center justify-between'>
           <div className='flex flex-row items-center p-10'>
             <Link href='/'>
               <p className=''>Home &gt;</p>
             </Link>
-            <p className='text-c4 pl-2 text-caption-14'>Hotel listings</p>
+            <p className='pl-2 text-caption-14 text-c4'>Hotel listings</p>
           </div>
           <div className='pr-10 md:hidden' onClick={handleDivClick}>
-
             {/* Filter icon */}
             <svg
               width='28'
@@ -52,14 +50,14 @@ export default function Home() {
         <div className='hidden lg:flex'>
           <SearchField2 />
         </div>
-        <div className='flex flex-col md:flex-row justify-center m-10 md:mx-20 gap-[40px]'>
+        <div className='m-10 flex flex-col justify-center gap-[40px] md:mx-20 md:flex-row'>
           <div className={`md:flex ${isFilterVisible ? '' : 'hidden'}`}>
             <Filter />
           </div>
           <HotelList />
         </div>
         <div className='flex items-center justify-center p-5 pb-8'>
-          <button className='text-c1 text-caption-16 w-[176px] h-[46px] rounded-[30px] border-[1px] py-[11px] px-[41px] hover:border-primary-blue'>
+          <button className='h-[46px] w-[176px] rounded-[30px] border-[1px] px-[41px] py-[11px] text-caption-16 text-c1 hover:border-primary-blue'>
             View more
           </button>
         </div>
