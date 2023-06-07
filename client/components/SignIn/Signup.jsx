@@ -39,13 +39,13 @@ const Signup = () => {
       console.log(data);
 
       if (data.success) {
-        // User logged in successfully
+        // User signed in successfully
         const userName = data.name; // Retrieve the name from the response
-        console.log('Logged in as:', userName);
-        // You can display the user's name on the login page or redirect to a new page displaying the user's name
+        console.log('Signed in as:', userName);
+        // You can display the user's name on the signin page or redirect to a new page displaying the user's name
       } else {
-        // Handle login failure
-        console.log('Login failed:', data.message);
+        // Handle signin failure
+        console.log('Signin failed:', data.message);
       }
     } catch (error) {
       console.error(error);
@@ -89,9 +89,9 @@ const Signup = () => {
                   className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 focus:outline-none'
                   id='name'
                   type='name'
+                  placeholder='Enter your name'
                   onChange={(e) => setName(e.target.value)}
                   value={name}
-                  placeholder='Enter your name'
                 />
               </div>
               <div className='mb-4'>
@@ -105,9 +105,9 @@ const Signup = () => {
                   className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 focus:outline-none'
                   id='email'
                   type='email'
+                  placeholder='Enter your email'
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  placeholder='Enter your email'
                 />
               </div>
               <div className='mb-4'>
@@ -121,9 +121,9 @@ const Signup = () => {
                   className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 focus:outline-none'
                   id='password'
                   type='password'
+                  placeholder='Enter your password'
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
-                  placeholder='Enter your password'
                 />
               </div>
               <div className='flex items-center justify-center'>
