@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "eslint": "8.38.0",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "cypress": "^12.13.0",
     "eslint-config-prettier": "^8.8.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.8",
