@@ -10,11 +10,14 @@ import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
 import Login from '../components/Signig/Login';
 import HotelDetail from '../components/HotelDetail/HotelDetail';
+import Signup from '../components/SignIn/Signup';
 
 export default function Home() {
   return (
     <div className='bg-slate-100'>
       <Navbar />
+      <Login />
+      <Signup />
       <SearchField />
       <CardSection />
       <FeaturedDestinations />
