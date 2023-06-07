@@ -19,8 +19,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex h-[78px] w-full bg-white items-center px-4 md:px-10 xl:px-12 justify-between'>
-        <div className='flex items-center gap-2 xs:gap-3 cursor-pointer'>
+      <nav
+        className='flex h-[78px] w-full bg-white items-center px-4 md:px-10 xl:px-12 justify-between'
+        data-cy='navbar' // Add data-cy attribute to the nav element
+      >
+        <div
+          className='flex items-center gap-2 xs:gap-3 cursor-pointer'
+          data-cy='navbar-logo' // Add data-cy attribute to the div element
+        >
           <Link href={'/'}>
             <div className='relative w-[40px] h-[38px] object-contain flex items-center'>
               <Image src={logo} alt='logo' />
@@ -41,7 +47,10 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <div className='flex items-center gap-3 cursor-pointer w-[80px]'>
+          <div
+            className='flex items-center gap-3 cursor-pointer w-[80px]'
+            data-cy='navbar-login' // Add data-cy attribute to the div element
+          >
             <div
               className='text-c2 text-body-16 cursor-pointer'
               onClick={handleLogin}
