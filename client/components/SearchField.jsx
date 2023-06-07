@@ -187,6 +187,87 @@ const SearchField = () => {
               ))}
           </form>
         </div>
+        {(activeTab === 'hotel' && (
+          <div className='border-b-2 border-blue-500 mt-5 mb-4'></div>
+        )) ||
+          (activeTab === 'flight' && (
+            <div className='border-b-2 border-emerald-400 mt-5 mb-4'></div>
+          )) ||
+          (activeTab === 'car' && (
+            <div className='border-b-2 border-red-400 mt-5 mb-4'></div>
+          ))}
+        <form
+          onSubmit={handleSubmit}
+          className='flex flex-wrap items-center justify-center'
+        >
+          <div className='flex flex-col mr-4 mb-4 border rounded bg-gray-100 w-64'>
+            <label htmlFor='location' className='ml-5 mt-2 mb-1 font-medium'>
+              Location:
+            </label>
+            <input
+              required=''
+              type='text'
+              id='location'
+              name='location'
+              className='ml-2 py-2 px-3 bg-transparent'
+              placeholder='Where are you going?'
+              value={location}
+              onChange={handleLocationChange}
+            />
+          </div>
+          <div className='flex flex-col mr-4 mb-4 border rounded bg-gray-100 w-64'>
+            <label htmlFor='checkin' className='ml-5 mt-2 mb-1 font-medium'>
+              Check-in date:
+            </label>
+            <input
+              required=''
+              type='date'
+              id='checkin'
+              name='checkin'
+              className='ml-2 py-2 px-3 bg-transparent'
+              value={checkInDate}
+              onChange={handleCheckInDateChange}
+            />
+          </div>
+          <div className='flex flex-col mr-4 mb-4 border rounded bg-gray-100 w-64'>
+            <label htmlFor='checkout' className='ml-5 mt-2 mb-1 font-medium'>
+              Check-out date:
+            </label>
+            <input
+              required=''
+              type='date'
+              id='checkout'
+              name='checkout'
+              className='ml-2 py-2 px-3 bg-transparent'
+              value={checkOutDate}
+              onChange={handleCheckOutDateChange}
+            />
+          </div>
+          {(activeTab === 'hotel' && (
+            <button
+              type='submit'
+              className='h-16 mb-4 flex-grow-0 py-3 px-6 bg-blue-500 text-white rounded-lg text-lg'
+            >
+              Search
+            </button>
+          )) ||
+            (activeTab === 'flight' && (
+              <button
+                type='submit'
+                className='h-16 mb-4 flex-grow-0 py-3 px-6 bg-emerald-400 text-white rounded-lg text-lg'
+              >
+                Search
+              </button>
+            )) ||
+            (activeTab === 'car' && (
+              <button
+                type='submit'
+                className='h-16 mb-4 flex-grow-0 py-3 px-6 bg-red-400 text-white rounded-lg text-lg'
+              >
+                Search
+              </button>
+            ))}
+        </form>
       </div>
     </div>
   );

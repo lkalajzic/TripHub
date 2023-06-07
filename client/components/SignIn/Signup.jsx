@@ -1,10 +1,12 @@
 'use client';
 
+
 import React, { useState, useRef, useEffect } from 'react';
 
 const Signup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
+
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
@@ -135,6 +137,7 @@ const Signup = () => {
                 </button>
               </div>
             </form>
+
             <div className='mt-4 text-center'>
               <span className='text-gray-700'>Have an account?</span>
               <a className='ml-2 text-blue-500 hover:text-blue-600' href='/'>

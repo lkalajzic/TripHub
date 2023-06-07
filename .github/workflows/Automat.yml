@@ -1,0 +1,24 @@
+name: Comment with information
+'on':
+  pull_request:
+    types:
+      - opened
+  issues:
+    types:
+      - opened
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Print environment variables
+        run: env
+      - name: Comment with information
+        run: |
+          echo "Today is $(date +"%A, %B %d, %Y")"
+          echo "Pushed by ${{ github.actor }}"

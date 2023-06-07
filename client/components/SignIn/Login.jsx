@@ -1,14 +1,17 @@
 'use client';
 
+
 import React, { useState, useRef, useEffect } from 'react';
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
 
+
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
+
 
   const handleClickOutside = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -131,6 +134,7 @@ const Login = () => {
                     className='text-sm text-blue-500 hover:text-blue-600'
                     href='/'
                   >
+
                     Forgot Password?
                   </a>
                 </div>
@@ -147,6 +151,7 @@ const Login = () => {
             <div className='mt-4 text-center'>
               <span className='text-gray-700'>Don't have an account?</span>
               <a className='ml-2 text-blue-500 hover:text-blue-600' href='/'>
+
                 Sign Up
               </a>
             </div>
