@@ -30,7 +30,7 @@ router.post('/register', async (req, res) => {
     const user = new User({ name, email, password });
     await user.save();
 
-    res.json({ success: true, message: 'User registered successfully' });
+    res.json({ success: true, message: 'User registered successfully', name: user.name });
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, message: 'An error occurred' });
@@ -60,7 +60,7 @@ router.post('/login', async (req, res) => {
     }
 
     // User is authenticated, send a success response
-    res.json({ success: true, message: 'User logged in successfully' });
+    res.json({ success: true, message: 'User logged in successfully', name: user.name });
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, message: 'An error occurred' });
