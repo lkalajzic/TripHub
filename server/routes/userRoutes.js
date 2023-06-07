@@ -51,12 +51,16 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(404).json({ success: false, message: 'User not found' });
+      return res
+        .status(404)
+        .json({ success: false, message: 'User not found' });
     }
 
     // Check if the password is correct
     if (user.password !== password) {
-      return res.status(401).json({ success: false, message: 'Incorrect password' });
+      return res
+        .status(401)
+        .json({ success: false, message: 'Incorrect password' });
     }
 
     // User is authenticated, send a success response
