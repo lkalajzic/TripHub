@@ -8,13 +8,15 @@ import FeaturedDestinations from '../components/FeaturedDestinations/FeaturedDes
 import TopTour from '../components/TopTour/TopTour';
 import ExploreWorld from '../components/Hotel/ExploreWorld';
 import TrendingCites from '../components/Hotel/TrendingCites';
-import Signup from '../components/Signig/Signup';
+import Signup from '../components/SignIn/Signup';
+import Login from '../components/SignIn/Login';
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Signup />
+
       <SearchField />
       <CardSection />
       <FeaturedDestinations />
