@@ -16,15 +16,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Install dependencies
-        run: npm install
+      - name: Print environment variables
+        run: env
       - name: Comment with information
-        run: >
+        run: |
           echo "Today is $(date +"%A, %B %d, %Y")"
-
           echo "Pushed by ${{ github.actor }}"
-
-          echo "Pushed on $(date +"%A, %B %d, %Y")" > comment.txt
-
-          cat comment.txt | gh issue comment ${{ github.event.issue.number }}
-          --body -
