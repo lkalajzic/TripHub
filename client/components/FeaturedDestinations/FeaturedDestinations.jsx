@@ -2,9 +2,11 @@
 
 import Card from './Cards';
 import images from '../../public/ImagesFeat/pictures';
+
 import React, { useState, useEffect } from 'react';
+
 const FeaturedDest = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
     // Update windowWidth state when the window is resized
@@ -12,11 +14,19 @@ const FeaturedDest = () => {
       setWindowWidth(window.innerWidth);
     };
 
+    // Check if window is defined before adding the event listener
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
+
     window.addEventListener('resize', handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
     };
   }, []);
 
