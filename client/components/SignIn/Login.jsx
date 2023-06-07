@@ -28,6 +28,17 @@ const Login = () => {
   
       const data = await response.json();
       console.log(data);
+
+      if (data.success) {
+        // User logged in successfully
+        const userName = data.name; // Retrieve the name from the response
+        console.log('Logged in as:', userName);
+        // You can display the user's name on the login page or redirect to a new page displaying the user's name
+      } else {
+        // Handle login failure
+        console.log('Login failed:', data.message);
+      }
+      
     } catch (error) {
       console.error(error);
     }
