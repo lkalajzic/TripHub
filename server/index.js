@@ -4,18 +4,17 @@ import cors from 'cors';
 
 import connectDB from './mongodb/connect.js';
 import searchRoutes from './routes/searchRoutes.js';
+import usersRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
 app.use('/search', searchRoutes);
-
-app.get('/', async (req, res) => {
-  res.send('Hello');
-});
+app.use('/api/users', usersRoutes);
 
 const startServer = async () => {
   try {
