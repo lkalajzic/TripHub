@@ -7,7 +7,8 @@ dotenv.config();
 
 const router = express.Router();
 
-router.route('/').get(async (req, res) => {
+//api to check connection
+router.route('/search').get(async (req, res) => {
   res.status(200).json({ message: 'Hello from searchRoutes!' });
 });
 
@@ -54,6 +55,7 @@ router.route('/').post(async(req, res) => {
     const { name, location, maxPrice, minPrice, minRating, currency } = req.body;
 
     const filteredHotels = filterHotels(name, location, maxPrice, minPrice, minRating, currency);
+
     res.status(200).json({ filteredHotels });
   } catch(err){
     console.error(err);

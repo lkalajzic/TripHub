@@ -13,7 +13,10 @@ const Hotel = new mongoose.Schema({
 });
 
 //filling up database
-/*Hotel.create([
+
+const hotelSchema = mongoose.model('Hotel', Hotel);
+
+const HotelsDB =[
   {
     name: 'Hotel California',
     location: 'Paris, France',
@@ -74,8 +77,14 @@ const Hotel = new mongoose.Schema({
     reviews: 63,
     description: 'A hotel with stunning Nile River views in Cairo.',
   },
-]); */
+];
 
-const hotelSchema = mongoose.model('Hotel', Hotel);
+Promise.all(HotelsDB.map((HotelDB) => new hotelSchema(HotelDB).save()))
+  .then(() => {
+    console.log('All bookings saved successfully!');
+  })
+  .catch((error) => {
+    console.error('Error saving bookings:', error);
+  });
 
 export default hotelSchema;
