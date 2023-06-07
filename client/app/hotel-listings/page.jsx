@@ -12,6 +12,7 @@ import Filter from '../../components/HotelListings/Filter';
 export default function Home() {
   const [isFilterVisible, setFilterVisible] = useState(false);
 
+
   // Function to handle the click event on a div containing the Filter
   const handleDivClick = () => {
     setFilterVisible(!isFilterVisible);
@@ -29,6 +30,7 @@ export default function Home() {
             <p className='text-c4 pl-2 text-caption-14'>Hotel listings</p>
           </div>
           <div className='pr-10 md:hidden' onClick={handleDivClick}>
+
             {/* Filter icon */}
             <svg
               width='28'
