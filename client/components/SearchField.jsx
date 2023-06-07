@@ -42,52 +42,152 @@ const SearchField = () => {
   };
 
   return (
-    <div className='w-3/4'>
-      <div className='bg-white rounded-[20px] p-6 mb-10'>
-        <div className='flex mb-4'>
-          <div
-            className={`flex items-center mr-6 mb-2 cursor-pointer ${
-              activeTab === 'hotel' ? 'text-blue-500' : 'text-gray-500'
-            }`}
-            onClick={() => handleTabClick('hotel')}
-          >
-            <span className='ml-2 font-medium'>Hotel</span>
+    <div
+      className='mx-auto flex justify-center px-8'
+      style={{
+        backgroundImage: `url('https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className='w-3/4'>
+        <h1 className='mt-20 text-heading-1 font-bold text-slate-50'>
+          Book With Us
+        </h1>
+        <h1 className='text-heading-1 font-bold text-slate-50'>
+          And Enjoy Your
+        </h1>
+        <h1 className='mb-3 text-heading-1 font-bold text-slate-50'>
+          Journey!
+        </h1>
+        <div className='mb-10 rounded-[20px] bg-white p-6'>
+          <div className='mb-4 flex'>
+            <div
+              className={`mb-2 mr-6 flex cursor-pointer items-center ${
+                activeTab === 'hotel' ? 'text-blue-500' : 'text-gray-500'
+              }`}
+              onClick={() => handleTabClick('hotel')}
+            >
+              <span className='ml-2 font-medium'>Hotel</span>
+            </div>
+            <div
+              className={`mb-2 mr-6 flex cursor-pointer items-center ${
+                activeTab === 'flight' ? 'text-emerald-400' : 'text-gray-500'
+              }`}
+              onClick={() => handleTabClick('flight')}
+            >
+              <span className='ml-2 font-medium'>Flight</span>
+            </div>
+            <div
+              className={`mb-2 flex cursor-pointer items-center ${
+                activeTab === 'car' ? 'text-red-400' : 'text-gray-500'
+              }`}
+              onClick={() => handleTabClick('car')}
+            >
+              <span className='ml-2 font-medium'>Car Rental</span>
+            </div>
+            {activeTab === 'flight' && (
+              <div className='ml-auto'>
+                <select
+                  className='rounded-lg bg-slate-50 px-3 py-2'
+                  value={flightType}
+                  onChange={handleFlightTypeChange}
+                >
+                  <option value='one-way'>One way</option>
+                  <option value='round-trip'>Round trip</option>
+                </select>
+                <span className='ml-4'>Passenger count:</span>
+                <input
+                  type='number'
+                  className='ml-2 w-14 rounded-lg bg-slate-50 px-3 py-2'
+                  value={passengerCount}
+                  onChange={handlePassengerCountChange}
+                />
+              </div>
+            )}
           </div>
-          <div
-            className={`flex items-center mr-6 mb-2 cursor-pointer ${
-              activeTab === 'flight' ? 'text-emerald-400' : 'text-gray-500'
-            }`}
-            onClick={() => handleTabClick('flight')}
+          {(activeTab === 'hotel' && (
+            <div className='mb-4 mt-5 border-b-2 border-blue-500'></div>
+          )) ||
+            (activeTab === 'flight' && (
+              <div className='mb-4 mt-5 border-b-2 border-emerald-400'></div>
+            )) ||
+            (activeTab === 'car' && (
+              <div className='mb-4 mt-5 border-b-2 border-red-400'></div>
+            ))}
+          <form
+            onSubmit={handleSubmit}
+            className='flex flex-wrap items-center justify-center'
           >
-            <span className='ml-2 font-medium'>Flight</span>
-          </div>
-          <div
-            className={`flex items-center mb-2 cursor-pointer ${
-              activeTab === 'car' ? 'text-red-400' : 'text-gray-500'
-            }`}
-            onClick={() => handleTabClick('car')}
-          >
-            <span className='ml-2 font-medium'>Car Rental</span>
-          </div>
-          {activeTab === 'flight' && (
-            <div className='ml-auto'>
-              <select
-                className='py-2 px-3 rounded-lg bg-slate-50'
-                value={flightType}
-                onChange={handleFlightTypeChange}
-              >
-                <option value='one-way'>One way</option>
-                <option value='round-trip'>Round trip</option>
-              </select>
-              <span className='ml-4'>Passenger count:</span>
+            <div className='mb-4 mr-4 flex w-64 flex-col rounded border bg-gray-100'>
+              <label htmlFor='location' className='mb-1 ml-5 mt-2 font-medium'>
+                Location:
+              </label>
               <input
-                type='number'
-                className='w-14 py-2 px-3 ml-2 rounded-lg bg-slate-50'
-                value={passengerCount}
-                onChange={handlePassengerCountChange}
+                required=''
+                type='text'
+                id='location'
+                name='location'
+                className='ml-2 bg-transparent px-3 py-2'
+                placeholder='Where are you going?'
+                value={location}
+                onChange={handleLocationChange}
               />
             </div>
-          )}
+            <div className='mb-4 mr-4 flex w-64 flex-col rounded border bg-gray-100'>
+              <label htmlFor='checkin' className='mb-1 ml-5 mt-2 font-medium'>
+                Check-in date:
+              </label>
+              <input
+                required=''
+                type='date'
+                id='checkin'
+                name='checkin'
+                className='ml-2 bg-transparent px-3 py-2'
+                value={checkInDate}
+                onChange={handleCheckInDateChange}
+              />
+            </div>
+            <div className='mb-4 mr-4 flex w-64 flex-col rounded border bg-gray-100'>
+              <label htmlFor='checkout' className='mb-1 ml-5 mt-2 font-medium'>
+                Check-out date:
+              </label>
+              <input
+                required=''
+                type='date'
+                id='checkout'
+                name='checkout'
+                className='ml-2 bg-transparent px-3 py-2'
+                value={checkOutDate}
+                onChange={handleCheckOutDateChange}
+              />
+            </div>
+            {(activeTab === 'hotel' && (
+              <button
+                type='submit'
+                className='text-lg mb-4 h-16 flex-grow-0 rounded-lg bg-blue-500 px-6 py-3 text-white'
+              >
+                Search
+              </button>
+            )) ||
+              (activeTab === 'flight' && (
+                <button
+                  type='submit'
+                  className='text-lg mb-4 h-16 flex-grow-0 rounded-lg bg-emerald-400 px-6 py-3 text-white'
+                >
+                  Search
+                </button>
+              )) ||
+              (activeTab === 'car' && (
+                <button
+                  type='submit'
+                  className='text-lg mb-4 h-16 flex-grow-0 rounded-lg bg-red-400 px-6 py-3 text-white'
+                >
+                  Search
+                </button>
+              ))}
+          </form>
         </div>
         {(activeTab === 'hotel' && (
           <div className='border-b-2 border-blue-500 mt-5 mb-4'></div>

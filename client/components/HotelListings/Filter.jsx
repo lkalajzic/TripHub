@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 const Filter = () => {
   const [value, setValue] = useState(100);
 
+
+  {/* Functions that handle price changes using the slider or input box */}
+
   const handleSliderChange = (event) => {
     const newValue = event.target.value;
     setValue(newValue);
@@ -40,6 +43,9 @@ const Filter = () => {
           >
             <rect width='277' height='1' fill='#E7ECF3' />
           </svg>
+
+          {/* Filtering using checkboxes */}
+
           <div className='flex flex-col justify-between items-start gap-[15px]'>
             <p className='text-c1 text-body-18'>Property type</p>
             <div className='relative flex flex-row justify-between items-center gap-3'>
@@ -131,6 +137,8 @@ const Filter = () => {
             </svg>
           </div>
 
+          {/* Filtering using the price slider */}
+
           <div>
             <div>
               <label
@@ -168,6 +176,8 @@ const Filter = () => {
                     <span className='text-c3 text-caption-16'>€200</span>
                   </div>
                 </div>
+
+                {/* Input box with the price value */}
 
                 <input
                   type='number'
