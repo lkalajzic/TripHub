@@ -7,6 +7,7 @@ const HotelCard = () => {
   return (
     <>
       <div className='h-[465px] w-[970] mb-96 lg:mb-8'>
+
         {/* Iterate over the hotel data */}
         {HotelData.map((hotel) => (
           <div className='flex flex-col lg:flex-row'>
@@ -18,7 +19,9 @@ const HotelCard = () => {
                 className='w-[420px] h-[475px] min-w-[300px] object-cover rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none'
               />
             </div>
+
             {/* Display the hotel information */}
+
             <div className='p-[31px] gap-5 lg:gap-[41px] max-w-[420px] sm:min-w-[420px] lg:max-w-none max-h-[600px] lg:max-h-[475px] xl:max-h-none flex flex-col border rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl'>
               <div className='flex flex-col gap-5 justify-between'>
                 {/* Display the hotel name */}
@@ -52,6 +55,7 @@ const HotelCard = () => {
               </div>
               <div className='flex flex-col lg:flex-row lg:flex-wrap gap-2 text-c3 text-[14px]'>
                 <div className='flex flex-col lg:flex-row lg:flex-wrap gap-2 items-start'>
+
                   {/* Display additional hotel information */}
                   <div className='flex flex-row gap-2 items-center'>
                     <img
