@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const SearchField = () => {
   const [activeTab, setActiveTab] = useState('hotel');
@@ -162,12 +163,14 @@ const SearchField = () => {
               />
             </div>
             {(activeTab === 'hotel' && (
-              <button
-                type='submit'
-                className='text-lg mb-4 h-16 flex-grow-0 rounded-lg bg-blue-500 px-6 py-3 text-white'
-              >
-                Search
-              </button>
+              <Link href={'/hotel-listings'}>
+                <button
+                  type='submit'
+                  className='text-lg mb-4 h-16 flex-grow-0 rounded-lg bg-blue-500 px-6 py-3 text-white'
+                >
+                  Search
+                </button>
+              </Link>
             )) ||
               (activeTab === 'flight' && (
                 <button
