@@ -1,17 +1,14 @@
 'use client';
 
-
 import React, { useState, useRef, useEffect } from 'react';
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
 
-
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
-
 
   const handleClickOutside = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -19,8 +16,8 @@ const Login = () => {
     }
   };
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -29,29 +26,30 @@ const Login = () => {
     console.log('Logging in...');
 
     try {
-      const response = await fetch('http://localhost:8080/api/users/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await response.json();
-      console.log(data);
-
-      if (data.success) {
-        // User logged in successfully
-        const userName = data.name; // Retrieve the name from the response
-        console.log('Logged in as:', userName);
-        // You can display the user's name on the login page or redirect to a new page displaying the user's name
-      } else {
-        // Handle login failure
-        console.log('Login failed:', data.message);
+        const response = await fetch('http://localhost:8080/api/users/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+    
+        const data = await response.json();
+        console.log(data);
+  
+        if (data.success) {
+          // User logged in successfully
+          const userName = data.name; // Retrieve the name from the response
+          console.log('Logged in as:', userName);
+          // You can display the user's name on the login page or redirect to a new page displaying the user's name
+        } else {
+          // Handle login failure
+          console.log('Login failed:', data.message);
+        }
+        
+      } catch (error) {
+        console.error(error);
       }
-    } catch (error) {
-      console.error(error);
-    }
 
     // Close the modal after login
     toggleForm();
@@ -95,8 +93,8 @@ const Login = () => {
                   id='email'
                   type='email'
                   placeholder='Enter your email'
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} 
+                  value={email} 
                 />
               </div>
               <div className='mb-4'>
@@ -111,8 +109,8 @@ const Login = () => {
                   id='password'
                   type='password'
                   placeholder='Enter your password'
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
+                  onChange={(e) => setPassword(e.target.value)} 
+                  value={password} 
                 />
               </div>
               <div className='mb-6'>
@@ -134,7 +132,6 @@ const Login = () => {
                     className='text-sm text-blue-500 hover:text-blue-600'
                     href='/'
                   >
-
                     Forgot Password?
                   </a>
                 </div>
@@ -151,7 +148,6 @@ const Login = () => {
             <div className='mt-4 text-center'>
               <span className='text-gray-700'>Don't have an account?</span>
               <a className='ml-2 text-blue-500 hover:text-blue-600' href='/'>
-
                 Sign Up
               </a>
             </div>

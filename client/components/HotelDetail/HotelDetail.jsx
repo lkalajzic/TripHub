@@ -68,7 +68,7 @@ const HotelDetail = () => {
       <div className='container mx-auto px-8 py-36'>
         <div>
           <h1 className='mb-3 text-left text-heading-1 text-[#23262F]'>
-            Swetzerland Hotels and Places to Stay
+            Swetzerland Alp Lakehouse
           </h1>
         </div>
         <div>

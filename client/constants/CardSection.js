@@ -1,7 +1,7 @@
 export default [
   {
-    img: '/images/Paris.jpg',
-    title: 'Paris, France',
+    img: '/images/SAlps.jpg',
+    title: 'Alps, Switzerland',
     text: 'See 38 destinations',
   },
   {

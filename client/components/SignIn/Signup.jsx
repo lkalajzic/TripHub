@@ -1,12 +1,10 @@
 'use client';
 
-
 import React, { useState, useRef, useEffect } from 'react';
 
 const Signup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
-
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
@@ -49,9 +47,13 @@ const Signup = () => {
         // Handle signin failure
         console.log('Signin failed:', data.message);
       }
+      
     } catch (error) {
       console.error(error);
     }
+
+    // Close the modal after login
+    toggleForm();
   };
 
   useEffect(() => {
@@ -75,7 +77,7 @@ const Signup = () => {
       </button>
       {isOpen && (
         <div className='fixed bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black bg-opacity-50'>
-          <div className='ref={modalRef} w-96 rounded-3xl bg-white p-8'>
+          <div className='w-96 rounded-3xl bg-white p-8' ref={modalRef}>
             <h2 className='mb-6 flex justify-center text-heading-2 font-normal'>
               Sign Up
             </h2>
@@ -137,7 +139,6 @@ const Signup = () => {
                 </button>
               </div>
             </form>
-
             <div className='mt-4 text-center'>
               <span className='text-gray-700'>Have an account?</span>
               <a className='ml-2 text-blue-500 hover:text-blue-600' href='/'>
