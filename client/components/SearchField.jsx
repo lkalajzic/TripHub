@@ -61,7 +61,7 @@ const SearchField = () => {
           Journey!
         </h1>
         <div className='mb-10 rounded-[20px] bg-white p-6'>
-          <div className='mb-4 flex'>
+          <div className='mb-4 flex flex-wrap'>
             <div
               className={`mb-2 mr-6 flex cursor-pointer items-center ${
                 activeTab === 'hotel' ? 'text-blue-500' : 'text-gray-500'
@@ -87,7 +87,7 @@ const SearchField = () => {
               <span className='ml-2 font-medium'>Car Rental</span>
             </div>
             {activeTab === 'flight' && (
-              <div className='ml-auto'>
+              <div className='ml-auto mt-2 sm:mt-0'>
                 <select
                   className='rounded-lg bg-slate-50 px-3 py-2'
                   value={flightType}
@@ -96,7 +96,7 @@ const SearchField = () => {
                   <option value='one-way'>One way</option>
                   <option value='round-trip'>Round trip</option>
                 </select>
-                <span className='ml-4'>Passenger count:</span>
+                <span className='ml-4'>Passengers:</span>
                 <input
                   type='number'
                   className='ml-2 w-14 rounded-lg bg-slate-50 px-3 py-2'
@@ -106,6 +106,7 @@ const SearchField = () => {
               </div>
             )}
           </div>
+
           {(activeTab === 'hotel' && (
             <div className='mb-4 mt-5 border-b-2 border-blue-500'></div>
           )) ||
