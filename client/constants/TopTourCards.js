@@ -9,14 +9,14 @@ export default [
       titleOffset: "30px"
     },
     {
-        img: '/../public/imagesTop/spain.jpg',
+        img: '/../public/imagesTop/spain.jpeg',
         title: 'Spain',
         text: `See ${genRand(0, 35, 0)} destinations`,
         city: "Madrid",
         titleOffset: "27px"
     },
     {
-        img: '/../public/imagesTop/bali.jpg',
+        img: '/../public/imagesTop/Bali.webp',
         title: 'Bali',
         text: `See ${genRand(0, 35, 0)} destinations`,
         city: "Ilab",
